@@ -1,0 +1,30 @@
+{
+    "name": "newfrontiers/location",
+    "type": "library",
+    "description": "Wrapper for location aware objects",
+    "keywords": [
+        "newfrontiers",
+        "images"
+    ],
+    "homepage": "https://github.com/new-frontiers/newfrontiers-location",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "new frontiers Software GmbH",
+            "email": "info@new-frontiers.de",
+            "homepage": "http://www.new-frontiers.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NewFrontiers\\Location\\": "src"
+        }
+    }
+}
