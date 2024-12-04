@@ -9,25 +9,21 @@ namespace NewFrontiers\Location;
  */
 class Geocode
 {
-
-
     /**
-     * Ermittelt zu einem übergebenen Entity die Koordinaten mit Hilfe
-     * der Google-Api
+     * Ermittelt zu einem übergebenen Entity die Koordinaten mithilfe der Google-Api
      * @param IHasLocation $location
      * @param $status
      * @return bool
      */
-    public static function geoCode(IHasLocation $location, &$status)
+    public static function geoCode(IHasLocation $location, &$status): bool
     {
-
         if (strlen($location->getGeoString()) < 5) {
             $status = 'Geo-String zu kurz (min 5 Stellen)';
             return false;
         }
 
         $adresseUrl = urlencode($location->getGeoString());
-        $geocodeURL = "http://maps.googleapis.com/maps/api/geocode/json?address=$adresseUrl&sensor=false";
+        $geocodeURL = "https://maps.googleapis.com/maps/api/geocode/json?address=$adresseUrl&sensor=false";
 
         $ch = curl_init($geocodeURL);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

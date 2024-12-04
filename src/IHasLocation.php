@@ -9,9 +9,9 @@ namespace NewFrontiers\Location;
  */
 interface IHasLocation
 {
-    public function getGeoString();
+    public function getGeoString(): string;
 
-    public function setLat($lat);
+    public function setLat(float $lat): void;
 
-    public function setLng($lng);
+    public function setLng(float $lng): void;
 }
