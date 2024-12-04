@@ -1,3 +1,6 @@
+/build/*
+!/build/phpunit.xml
+!/build/phpmd.xml
 /.idea
 /vendor
 /composer.lock
